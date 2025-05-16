@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web - Careers</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --ultra-violet: #6C698D;
+            --timberwolf: #D4D2D5;
+            --eerie-black: #1F2421;
+            --silver: #BFAFA6;
+            --beaver: #AA968A;
+            --dim-gray: #6E6A6F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--timberwolf);
+            color: var(--eerie-black);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--ultra-violet);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--ultra-violet);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--dim-gray);
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: var(--eerie-black);
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--eerie-black);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .logo span {
+            color: var(--silver);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--silver);
+        }
+        
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/default.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        #hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        #hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* About Section */
+        #about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Team Section */
+        #team {
+            background-color: var(--timberwolf);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .member-info p {
+            color: var(--dim-gray);
+            margin-bottom: 15px;
+        }
+        
+        /* Jobs Section */
+        #jobs {
+            background-color: white;
+        }
+        
+        .job-list {
+            margin-top: 40px;
+        }
+        
+        .job-item {
+            background-color: var(--timberwolf);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .job-item h3 {
+            color: var(--ultra-violet);
+        }
+        
+        .job-specs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .spec-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .spec-item h4 {
+            margin-bottom: 10px;
+            color: var(--eerie-black);
+        }
+        
+        .spec-item ul {
+            list-style-position: inside;
+        }
+        
+        /* Courses Section */
+        #courses {
+            background-color: var(--timberwolf);
+        }
+        
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .course-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .course-image img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .course-info {
+            padding: 20px;
+        }
+        
+        .course-info h3 {
+            margin-bottom: 10px;
+        }
+        
+        /* Application Section */
+        #apply {
+            background-color: white;
+        }
+        
+        .application-form {
+            max-width: 800px;
+            margin: 40px auto 0;
+            background-color: var(--timberwolf);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--silver);
+            border-radius: 5px;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--eerie-black);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+        }
+        
+        .footer-links a:hover {
+            color: var(--silver);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            color: var(--silver);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            #hero h1 {
+                font-size: 36px;
+            }
+            
+            #hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Hot Beans <span>Web</span></a>
+                <ul class="nav-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#apply">Apply Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Build Your Future with Hot Beans Web</h1>
+            <p>Join our team of talented web developers and work on exciting projects for clients around the world. We're looking for passionate individuals ready to take their career to the next level.</p>
+            <a href="#apply" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Hot Beans Web</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hot Beans Web is a leading web development company specializing in creating innovative, user-friendly websites and web applications for businesses of all sizes. Founded in 2010, we've grown from a small startup to a team of over 50 developers working with clients across multiple industries.</p>
+                    <p>At Hot Beans Web, we believe in fostering talent and providing opportunities for growth. Our junior developer program is designed to help recent graduates and course completers transition into professional web development roles with mentorship from our experienced team members.</p>
+                    <p>We pride ourselves on our collaborative culture, cutting-edge technologies, and commitment to continuous learning. Whether you're just starting your career or looking to take the next step, Hot Beans Web could be the perfect place for you.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/default.png" alt="Hot Beans Web Office">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2>Meet Our Trainee Developers</h2>
+            <p>Get to know some of our current trainees who started just like you!</p>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/default.png" alt="Sarah Johnson">
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Johnson</h3>
+                        <p>Junior Front-End Developer</p>
+                        <p>"Joining Hot Beans Web straight after completing my web development bootcamp was the best decision I could have made. The support and mentorship I've received has helped me grow so much in just six months."</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/default.png" alt="Michael Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Chen</h3>
+                        <p>Junior Full-Stack Developer</p>
+                        <p>"The projects I've worked on here have given me real-world experience that no course could provide. I love how the company encourages us to learn new technologies and take on challenges."</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/default.png" alt="Emma Rodriguez">
+                    </div>
+                    <div class="member-info">
+                        <h3>Emma Rodriguez</h3>
+                        <p>Junior Back-End Developer</p>
+                        <p>"Coming from a self-taught background, I was nervous about my first professional role. Hot Beans Web provided the perfect environment to build my confidence and skills alongside experienced developers."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs">
+        <div class="container">
+            <h2>Current Job Openings</h2>
+            <p>We're looking for talented individuals to join our team. Check out our current openings below.</p>
+            
+            <div class="job-list">
+                <!-- Job 1 -->
+                <div class="job-item">
+                    <h3>Junior Front-End Developer</h3>
+                    <div class="job-specs">
+                        <div class="spec-item">
+                            <h4>Requirements</h4>
+                            <ul>
+                                <li>Completed web development course or bootcamp</li>
+                                <li>Proficiency in HTML, CSS, JavaScript</li>
+                                <li>Basic understanding of responsive design</li>
+                                <li>Familiarity with version control (Git)</li>
+                            </ul>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Nice to Have</h4>
+                            <ul>
+                                <li>Experience with React or Vue.js</li>
+                                <li>Understanding of accessibility standards</li>
+                                <li>Basic knowledge of UI/UX principles</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#apply" class="btn">Apply for this position</a>
+                </div>
+                
+                <!-- Job 2 -->
+                <div class="job-item">
+                    <h3>Junior Back-End Developer</h3>
+                    <div class="job-specs">
+                        <div class="spec-item">
+                            <h4>Requirements</h4>
+                            <ul>
+                                <li>Completed back-end development course or equivalent</li>
+                                <li>Proficiency in at least one server-side language (Node.js, Python, PHP)</li>
+                                <li>Basic database knowledge (SQL or NoSQL)</li>
+                                <li>Understanding of RESTful APIs</li>
+                            </ul>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Nice to Have</h4>
+                            <ul>
+                                <li>Experience with cloud platforms (AWS, Azure)</li>
+                                <li>Knowledge of authentication methods</li>
+                                <li>Familiarity with Docker</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#apply" class="btn">Apply for this position</a>
+                </div>
+                
+                <!-- Job 3 -->
+                <div class="job-item">
+                    <h3>Junior Full-Stack Developer</h3>
+                    <div class="job-specs">
+                        <div class="spec-item">
+                            <h4>Requirements</h4>
+                            <ul>
+                                <li>Completed full-stack development program</li>
+                                <li>Front-end skills (HTML, CSS, JavaScript)</li>
+                                <li>Back-end skills (Node.js, Python, or similar)</li>
+                                <li>Understanding of the full web development lifecycle</li>
+                            </ul>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Nice to Have</h4>
+                            <ul>
+                                <li>Experience with MERN or MEAN stack</li>
+                                <li>Knowledge of testing frameworks</li>
+                                <li>Familiarity with CI/CD pipelines</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="#apply" class="btn">Apply for this position</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <div class="container">
+            <h2>Recommended Web Development Courses</h2>
+            <p>If you're looking to build your skills before applying, check out these excellent web development courses.</p>
+            
+            <div class="course-list">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/default.png" alt="Front-End Masters">
+                    </div>
+                    <div class="course-info">
+                        <h3>Front-End Web Development</h3>
+                        <p>Comprehensive front-end course covering HTML, CSS, JavaScript and modern frameworks.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/default.png" alt="Back-End Development">
+                    </div>
+                    <div class="course-info">
+                        <h3>Back-End Development with Node.js</h3>
+                        <p>Master server-side JavaScript and build robust back-end systems.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="images/default.png" alt="Full-Stack Bootcamp">
+                    </div>
+                    <div class="course-info">
+                        <h3>Full-Stack Web Development Bootcamp</h3>
+                        <p>Complete program covering both front-end and back-end technologies.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section id="apply">
+        <div class="container">
+            <h2>Apply Now</h2>
+            <p>Ready to start your career at Hot Beans Web? Fill out the application form below.</p>
+            
+            <form class="application-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="position">Position Applying For</label>
+                    <select id="position" name="position" required>
+                        <option value="">Select a position</option>
+                        <option value="front-end">Junior Front-End Developer</option>
+                        <option value="back-end">Junior Back-End Developer</option>
+                        <option value="full-stack">Junior Full-Stack Developer</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="education">Education/Courses Completed</label>
+                    <textarea id="education" name="education" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience">Previous Experience (if any)</label>
+                    <textarea id="experience" name="experience"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="portfolio">Portfolio Link (GitHub, personal site, etc.)</label>
+                    <input type="url" id="portfolio" name="portfolio">
+                </div>
+                
+                <div class="form-group">
+                    <label for="resume">Upload Resume/CV</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                </div>
+                
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="logo">Hot Beans <span>Web</span></a>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#apply">Apply</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">&copy; 2023 Hot Beans Web. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

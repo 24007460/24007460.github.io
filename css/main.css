@@ -1,0 +1,124 @@
+:root {
+    --ultra-violet: #6C698D;
+    --timberwolf: #D4D2D5;
+    --eerie-black: #1F2421;
+    --silver: #BFAFA6;
+    --beaver: #AA968A;
+    --dim-gray: #6E6A6F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    background-color: var(--eerie-black);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links a {
+    color: #646464;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--timberwolf);
+}
+
+.nav-links li {
+    margin-right: 25px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about, #jobs, #apply, #team, #courses {
+    padding: 20px 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-img{
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: translateY(-20px);
+}
+
+#about, #jobs, #apply{
+    background-color: #fff;
+}
+
+#team, #courses {
+    background-color: var(--timberwolf);
+}
+
+footer {
+    background-color: var(--eerie-black);
+    color: #fff;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.copyright {
+    color: var(--dim-gray);
+}
