@@ -39,9 +39,12 @@ a {
 .button {
     display: inline-block;
     background-color: var(--ultra-violet);
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 15px;
     transition: background-color 0.3s ease;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -176,11 +179,11 @@ nav {
 }
 
 .job-card {
+    display: inline;
     background-color: var(--timberwolf);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 40px;
-    display: inline;
 }
 
 .job-card h3 {
@@ -204,6 +207,41 @@ nav {
 /* Course cards */
 .card-info a {
     margin: 15px;
+}
+
+/* Apply */
+.apply-form {
+    background-color: var(--timberwolf);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px;
+    width: 100%;
+}
+
+.form-item {
+    display: grid;
+    padding: 10px;
+}
+
+.form-item label {
+    font-weight: bold;
+    margin: 5px;
+}
+
+.form-item input, .form-item select, .form-item textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--dim-gray);
+}
+
+.form-item textarea {
+    height: 150px;
+}
+
+.form-item input[type="file"] {
+    border: 1px solid 000;
+    margin-bottom: 10px;
 }
 
 /* Footer */

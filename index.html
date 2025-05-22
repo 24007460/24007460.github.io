@@ -230,12 +230,69 @@
             <div class="container">
                 <h2>Apply Now</h2>
                 <p>Ready to start your career at Hot Beans Web? Fill out the application form below.</p>
+
+                <div class="apply-form">
+                    <!-- Name -->
+                    <div class="form-item">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="form-item">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <!-- Phone Number -->
+                    <div class="form-item">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                    
+                    <!-- Position -->
+                    <div class="form-item">
+                        <label for="position">Applying for...</label>
+                        <select id="position" name="position" required>
+                            <option value>Select a position</option>
+                            <option value="front-end">Junior Front-End Developer</option>
+                            <option value="back-end">Junior Back-End Developer</option>
+                            <option value="full-stack">Junior Full-Stack Developer</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Education -->
+                    <div class="form-item">
+                        <label for="education">Education/Courses Completed</label>
+                        <textarea id="education" name="education" required></textarea>
+                    </div>
+                    
+                    <!-- Experience -->
+                    <div class="form-item">
+                        <label for="experience">Previous Experiences</label>
+                        <textarea id="experience" name="experience"></textarea>
+                    </div>
+                    
+                    <!-- Portfolio -->
+                    <div class="form-item">
+                        <label for="portfolio">Portfolio Link</label>
+                        <input type="text" id="portfolio" name="portfolio">
+                    </div>
+                    
+                    <!-- Resume -->
+                    <div class="form-item">
+                        <label for="resume">Upload CV/Resume</label>
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                    </div>
+                    
+                    <button type="submit" class="button">Submit Application</button>
+                </div>
             </div>
         </section>
 
         <!-- Footer -->
         <footer>
-            <a href="#" class="logo">Hot Beans <span style="color: var(--silver);">Web</span></a>
+            <a href="#" class="logo">Hot Beans <span>Web</span></a>
             <ul class="footer-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#team">Team</a></li>
@@ -244,7 +301,7 @@
                 <li><a href="#apply">Apply</a></li>
                 <li><a href="#">Privacy Policy</a></li>
             </ul>
-            <p style="color: var(--dim-gray);">&copy; 2023 Hot Beans Web. All rights reserved.</p>
+            <p style="color: var(--dim-gray);">&copy; 2025 Hot Beans Web. All rights reserved.</p>
         </footer>
     </body>
 </html>
