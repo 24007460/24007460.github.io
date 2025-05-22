@@ -250,7 +250,7 @@ nav {
 }
 
 /* Mobile Responsiveness */
-@media (orientation: portrait) {
+@media only screen and (orientation: portrait) {
     /* Navbar */
     nav {
         display: inline;
@@ -281,7 +281,7 @@ nav {
 
     /* Column Card */
     .card-grid {
-        display: block;
+        display: inline-block;
     }
 }
 
