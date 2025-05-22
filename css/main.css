@@ -246,10 +246,11 @@ nav {
 .form-item input[type="file"] {
     border: 1px solid 000;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 /* Mobile Responsiveness */
-@media only screen and (orientation: portrait) {
+@media (orientation: portrait) {
     /* Navbar */
     nav {
         display: inline;
