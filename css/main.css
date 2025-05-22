@@ -23,7 +23,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: comic-sans; */
     font-family: "Segoe UI", sans-serif;
 }
 
@@ -62,10 +61,10 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .container {
+    display: block;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -214,8 +213,13 @@ nav {
     background-color: var(--timberwolf);
     border-radius: 20px;
     padding: 20px;
-    margin: 15px;
+    margin-top: 15px;
     width: 100%;
+}
+
+.apply-form button {
+    margin-left: 5px;
+    width: 20%;
 }
 
 .form-item {
@@ -242,6 +246,42 @@ nav {
 .form-item input[type="file"] {
     border: 1px solid 000;
     margin-bottom: 10px;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (orientation: portrait) {
+    /* Navbar */
+    nav {
+        display: inline;
+    }
+
+    .logo {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: inline-flexbox;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin-inline: 20px;
+    }
+
+    /* About */
+    .about-content {
+        display: block;
+    }
+
+    .about-img {
+        margin-top: 10px;
+    }
+
+    /* Column Card */
+    .card-grid {
+        display: block;
+    }
 }
 
 /* Footer */

@@ -231,7 +231,7 @@
                 <h2>Apply Now</h2>
                 <p>Ready to start your career at Hot Beans Web? Fill out the application form below.</p>
 
-                <div class="apply-form">
+                <form class="apply-form" name="apply-form" method="post" action="mailto:simongajdoscak@gmail.com" enctype="text/plain">
                     <!-- Name -->
                     <div class="form-item">
                         <label for="name">Full Name</label>
@@ -247,7 +247,7 @@
                     <!-- Phone Number -->
                     <div class="form-item">
                         <label for="phone">Phone Number</label>
-                        <input type="text" id="phone" name="phone" required>
+                        <input type="number" id="phone" name="phone" required>
                     </div>
                     
                     <!-- Position -->
@@ -282,11 +282,11 @@
                     <!-- Resume -->
                     <div class="form-item">
                         <label for="resume">Upload CV/Resume</label>
-                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
                     </div>
                     
-                    <button type="submit" class="button">Submit Application</button>
-                </div>
+                    <input type="submit" class="button" value="Submit Application">
+                </form>
             </div>
         </section>
 
