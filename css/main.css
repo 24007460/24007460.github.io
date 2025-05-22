@@ -7,7 +7,6 @@
     --dim-gray: #6E6A6F;
 }
 
-
 @font-face{
     font-family: comic-sans;
     src: url(../fonts/comic.ttf);
@@ -217,9 +216,8 @@ nav {
     width: 100%;
 }
 
-.apply-form button {
-    margin-left: 5px;
-    width: 20%;
+.apply-form .button {
+    font-size: 16px;
 }
 
 .form-item {
@@ -282,6 +280,11 @@ nav {
     /* Column Card */
     .card-grid {
         display: inline-block;
+    }
+
+    /* Apply */
+    .apply-form .button {
+        width: 100%;
     }
 }
 
