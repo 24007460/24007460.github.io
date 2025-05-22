@@ -1,0 +1,200 @@
+:root {
+    --ultra-violet: #6C698D;
+    --timberwolf: #D4D2D5;
+    --eerie-black: #1F2421;
+    --silver: #BFAFA6;
+    --beaver: #AA968A;
+    --dim-gray: #6E6A6F;
+}
+
+
+@font-face{
+    font-family: comic-sans;
+    src: url(../fonts/comic.ttf);
+}
+
+@font-face {
+    font-family: comic-sans;
+    src: url(../fonts/comicbd.ttf);
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: comic-sans; */
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header {
+    background-color: var(--eerie-black);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    font-family: comic-sans;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links a {
+    color: #646464;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--timberwolf);
+}
+
+.nav-links li {
+    margin-right: 25px;
+}
+
+/* Website Content */
+#about, #jobs, #apply, #team, #courses {
+    padding: 20px 0;
+}
+
+#about, #jobs, #apply{
+    background-color: #fff;
+}
+
+#team, #courses {
+    background-color: var(--timberwolf);
+}
+
+/* About */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-img{
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+/* Team cards */
+.team-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr; /* https://stackoverflow.com/questions/67854299/columns-side-by-side-with-css-grid */
+}
+
+.team-card {
+    margin-top: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-20px);
+}
+
+.card-image img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.card-info {
+    text-align: center;
+}
+
+.card-info p {
+    color: var(--dim-gray);
+}
+
+/* Job cards */
+.job-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.job-card {
+    margin-top: 40px;
+    background-color: var(--timberwolf);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.job-card h3 {
+    color: var(--ultra-violet);
+}
+
+.job-card a {
+    background-color: var(--ultra-violet);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.job-info {
+    /* gap: 30px */
+    margin: 25px 0px 40px 20px;
+}
+
+.job-info h4{
+    margin-left: -20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--eerie-black);
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
