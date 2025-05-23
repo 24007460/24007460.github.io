@@ -1,5 +1,6 @@
 #6C698D - Ultra Violet
-#D4D2D5 - Timberwolf / #1F2421 - Eerie black
+#D4D2D5 - Timberwolf
+#1F2421 - Eerie black
 #BFAFA6 - Silver
 #AA968A - Beaver
 #6E6A6F - Dim gray
