@@ -36,6 +36,7 @@ a {
 
 .button {
     display: inline-block;
+    text-align: center;
     background-color: var(--ultra-violet);
     border-radius: 15px;
     padding: 15px;
@@ -275,6 +276,11 @@ nav {
 
     .about-img {
         margin-top: 10px;
+    }
+
+    /* Job cards */
+    .job-card a {
+        width: 100%;
     }
 
     /* Column Card */
