@@ -231,7 +231,9 @@
                 <h2>Apply Now</h2>
                 <p>Ready to start your career at Hot Beans? Fill out the application form below.</p>
 
-                <form class="apply-form" name="apply-form" method="post" action="mailto:hotbeans@example.com" enctype="text/plain">
+                <form class="apply-form" name="apply-form" method="post" a
+                ction="mailto:hotbeans@example.com" enctype="multipart/form-data"
+                onsubmit="return ValidateForm();">
                     <!-- Name -->
                     <div class="form-item">
                         <label for="name">Full Name</label>
@@ -264,7 +266,7 @@
                     <!-- Education -->
                     <div class="form-item">
                         <label for="education">Education/Courses Completed</label>
-                        <textarea id="education" name="education" required></textarea>
+                        <textarea id="education" name="education" minlength="10" required></textarea>
                     </div>
                     
                     <!-- Experience -->
@@ -305,5 +307,7 @@
                 <p style="color: var(--dim-gray);">&copy; 2025 Hot Beans Web. All rights reserved.</p>
             </div>
         </footer>
+
+        <script src="js/validation.js"></script>
     </body>
 </html>
