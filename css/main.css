@@ -50,6 +50,15 @@ a {
     background-color: var(--dim-gray);
 }
 
+.container {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
 header {
     background-color: var(--eerie-black);
     padding: 20px 0;
@@ -63,15 +72,6 @@ nav {
     justify-content: space-between;
 }
 
-.container {
-    display: block;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navbar */
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -89,7 +89,7 @@ nav {
 }
 
 .nav-links a {
-    color: #646464;
+    color: #1a1a1a;
     transition: color 0.3s ease;
 }
 
