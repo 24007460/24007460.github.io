@@ -272,11 +272,16 @@ footer {
     .logo {
         display: block;
         text-align: center;
+        font-size: 6vw;
     }
 
     .nav-links {
-        display: inline-flexbox;
+        font-size: 4vw;
         justify-content: center;
+    }
+
+    .footer-links {
+        font-size: 4vw;
     }
 
     .nav-links li {
