@@ -304,7 +304,7 @@ footer {
 
     /* Column Card */
     .card-grid {
-        display: inline-block;
+        display: inline;
     }
 
     /* Apply */
